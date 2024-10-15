@@ -1,8 +1,8 @@
 {
   "name": "flutter-quick-snips",
-  "displayName": "flutter-quick-snips",
+  "displayName": "Flutter Quick Snips",
   "description": "A collection of useful Flutter widget snippets for quick access.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.94.0"
   },
