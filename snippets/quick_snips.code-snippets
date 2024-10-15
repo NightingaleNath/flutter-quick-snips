@@ -1,0 +1,1063 @@
+{
+  "Stateless widget snippet": {
+    "prefix": "flutter_stless",
+    "body": [
+      "class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends StatelessWidget {",
+      "  const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}({super.key});",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return ${2:Container}(${0});",
+      "  }",
+      "}"
+    ],
+    "description": "StatelessWidget snippet"
+  },
+  "Stateful widget snippet": {
+    "prefix": "flutter_stful",
+    "body": [
+      "class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends StatefulWidget {",
+      "  const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}({super.key});",
+      "",
+      "  @override",
+      "  State<${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}> createState() => _${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State();",
+      "}",
+      "",
+      "class _${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}State extends State<${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}> {",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return Container(",
+      "      $2",
+      "    );",
+      "  }",
+      "}"
+    ],
+    "description": "StatefulWidget snippet"
+  },
+  "Scaffold widget snippet": {
+    "prefix": "flutter_scaffold",
+    "body": [
+      "Scaffold(",
+      "  appBar: AppBar(",
+      "    title: const Text('${1:Title}', style: TextStyle(fontSize: 20, color: Colors.black, fontWeight: FontWeight.bold)),",
+      "  ),",
+      "  body: ${3:Container()},",
+      ")${3:;}"
+    ],
+    "description": "Scaffold widget snippet"
+  },
+  "EdgeInsets widget snippet with named constructor `all`": {
+    "prefix": "flutter_edge_all",
+    "body": ["EdgeInsets.all(${1:32.0})${0}"],
+    "description": "EdgeInsets widget snippet with named constructor `all`"
+  },
+  "Text widget snippet": {
+    "prefix": "flutter_text",
+    "body": [
+      "const Text(",
+      "  '${1:text}',",
+      "  style: TextStyle(",
+      "    fontSize: ${2:16},",
+      "    color: Colors.black,",
+      "    fontWeight: FontWeight.normal,",
+      "  ),",
+      ")${0}"
+    ],
+    "description": "Text widget snippet with text style"
+  },
+  "Dart Public Instance variable snippet": {
+    "prefix": "dart_var",
+    "body": ["${1:dynamic} ${2:variableName}${0}"],
+    "description": "Public Instance variable snippet"
+  },
+  "Dart Private instance variable snippet": {
+    "prefix": "dart_priv_var",
+    "body": ["${1:dynamic} _${2:variableName};${0}"],
+    "description": "Private instance variable snippet"
+  },
+  "Flutter initState lifecycle method snippet": {
+    "prefix": "flutter_init",
+    "body": [
+      "@override",
+      "void initState() {",
+      "  super.initState();",
+      "  ${0}",
+      "}"
+    ],
+    "description": "Flutter initState lifecycle method"
+  },
+  "Dart private method snippet": {
+    "prefix": "dart_priv_method",
+    "body": ["${1:void} _${2:methodName}(${3}) ${4}{", "  ${0}", "}"],
+    "description": "Private method snippet"
+  },
+  "Dart optional named parameters constructor snippet": {
+    "prefix": "dart_opt_ctor",
+    "body": ["${1:constructorName}({${2}});${0}"],
+    "description": "Optional named parameters constructor snippet"
+  },
+  "Flutter ElevatedButton widget snippet": {
+    "prefix": "flutter_elev_btn",
+    "body": [
+      "ElevatedButton(",
+      "  onPressed: () {${1:print('Button pressed!');}},",
+      "  child: const Text('${2:Button Text}', style: TextStyle(fontSize: 16)),",
+      ")${0}"
+    ],
+    "description": "Flutter ElevatedButton widget snippet"
+  },
+  "Flutter TextButton widget snippet": {
+    "prefix": "flutter_txt_btn",
+    "body": [
+      "TextButton(",
+      "  onPressed: () {${1:print('Text button pressed!');}},",
+      "  child: const Text('${2:Button Text}', style: TextStyle(fontSize: 16)),",
+      ")${0}"
+    ],
+    "description": "Flutter TextButton widget snippet"
+  },
+  "Flutter OutlinedButton widget snippet": {
+    "prefix": "flutter_out_btn",
+    "body": [
+      "OutlinedButton(",
+      "  onPressed: () {${1:print('Outlined button pressed!');}},",
+      "  child: const Text('${2:Button Text}', style: TextStyle(fontSize: 16)),",
+      ")${0}"
+    ],
+    "description": "OutlinedButton widget snippet"
+  },
+  "Flutter Icon widget snippet": {
+    "prefix": "flutter_icon",
+    "body": ["Icon(Icons.${1:clear})${0}"],
+    "description": "Flutter Icon widget snippet"
+  },
+  "Flutter Container widget snippet": {
+    "prefix": "flutter_con",
+    "body": ["Container(", "  child: ${1:Widget}(${0}),", ")"],
+    "description": "Flutter Container widget snippet"
+  },
+  "Flutter Center widget snippet": {
+    "prefix": "flutter_cen",
+    "body": ["Center(", "  child: ${1:Widget}(${0}),", ")"],
+    "description": "Flutter Center widget snippet"
+  },
+  "Flutter Row widget snippet": {
+    "prefix": "flutter_row",
+    "body": ["Row(", "  children: <Widget>[${0}],", ")"],
+    "description": "Flutter Row widget snippet"
+  },
+  "Flutter Column widget snippet": {
+    "prefix": "flutter_column",
+    "body": ["Column(", "  children: <Widget>[${0}],", ")"],
+    "description": "Flutter Column widget snippet"
+  },
+  "SizedBox widget snippet with width and height arguments": {
+    "prefix": "flutter_szbox",
+    "body": ["SizedBox(width: ${1:0.0}, height: ${2:0.0})${0}"],
+    "description": "SizedBox widget with width and height arguments"
+  },
+  "SizedBox widget snippet with just width argument": {
+    "prefix": "flutter_szbox_w",
+    "body": ["SizedBox(", "  width: ${1:0.0},${0}", ")"],
+    "description": "SizedBox widget snippet with just width argument"
+  },
+  "SizedBox widget snippet with just height argument": {
+    "prefix": "flutter_szbox_h",
+    "body": ["SizedBox(", "  height: ${1:0.0},${0}", ")"],
+    "description": "SizedBox widget snippet with just height argument"
+  },
+  "Expand widget snippet": {
+    "prefix": "flutter_expand",
+    "body": ["Expanded(", "  child: ${1:null},${0}", ")"],
+    "description": "Expand widget snippet"
+  },
+  "EdgeInsets widget snippet with named constructor `only`": {
+    "prefix": "flutter_edge_only",
+    "body": ["EdgeInsets.only(${1})${0}"],
+    "description": "EdgeInsets widget snippet with named constructor `only`"
+  },
+  "EdgeInsets widget snippet with symmetric constructor `symmetric`": {
+    "prefix": "flutter_edge_sym",
+    "body": [
+      "EdgeInsets.symmetric(vertical: ${1:8.0}, horizontal: ${2:8.0})${0}"
+    ],
+    "description": "EdgeInsets widget snippet with symmetric constructor `symmetric`"
+  },
+  "EdgeInsets widget snippet with symmetric constructor `symmetric` with only vertical parameter": {
+    "prefix": "flutter_edge_symv",
+    "body": ["EdgeInsets.symmetric(vertical: ${1:8.0})${0}"],
+    "description": "EdgeInsets widget snippet with symmetric constructor `symmetric` with only vertical parameter"
+  },
+  "EdgeInsets widget snippet with symmetric constructor `symmetric` with only horizontal parameter": {
+    "prefix": "flutter_edge_symh",
+    "body": ["EdgeInsets.symmetric(horizontal: ${1:8.0})${0}"],
+    "description": "EdgeInsets widget snippet with symmetric constructor `symmetric` with only horizontal parameter"
+  },
+  "Dart `List` collection snippet": {
+    "prefix": "dart_list",
+    "body": ["List<${1:dynamic}> ${2:listName}${0}"],
+    "description": "Dart `List` collection snippet"
+  },
+  "Dart `Map` collection snippet": {
+    "prefix": "dart_map",
+    "body": ["Map<${1:dynamic}, ${2:dynamic}> ${3:mapName}${0}"],
+    "description": "Dart `Map` collection snippet"
+  },
+  "Padding widget snippet": {
+    "prefix": "flutter_padding",
+    "body": [
+      "Padding(",
+      "  padding: EdgeInsets.${1:all}(${2:8.0}),",
+      "  child: ${3:Widget},",
+      ")"
+    ],
+    "description": "Padding widget snippet"
+  },
+  "Dart `Set` collection snippet": {
+    "prefix": "dart_set",
+    "body": ["Set<${1:dynamic}> ${2:setName}${0}"],
+    "description": "Dart `Set` collection snippet"
+  },
+  "Dart `Future` snippet": {
+    "prefix": "dart_future",
+    "body": ["Future<${1:void}> ${2:functionName}() async ${0}"],
+    "description": "Dart `Future` snippet"
+  },
+  "Dart `async` function snippet": {
+    "prefix": "dart_async",
+    "body": ["${1:void} ${2:functionName}() async ${0}"],
+    "description": "Dart `async` function snippet"
+  },
+  "Dart arrow function getter snippet": {
+    "prefix": "dart_getar",
+    "body": ["${1:dynamic} get ${2:name} => ${3:returnValue};${0}"],
+    "description": "Dart arrow function getter snippet"
+  },
+  "Dart `import as` snippet": {
+    "prefix": "dart_impas",
+    "body": ["import '${1:packageName}' as ${2:alias}${0};"],
+    "description": "Dart `import as` snippet"
+  },
+  "Dart `import show` snippet": {
+    "prefix": "dart_impshow",
+    "body": ["import '${1:packageName}' show ${2:member}${0};"],
+    "description": "Dart `import show` snippet"
+  },
+  "Dart `import deferred as` snippet": {
+    "prefix": "dart_implazy",
+    "body": ["import '${1:packageName}' deferred as ${2:alias}${0};"],
+    "description": "Dart `import deferred as` snippet"
+  },
+  "Dart `import hide` snippet": {
+    "prefix": "dart_imphide",
+    "body": ["import '${1:packageName}' hide ${2:member}${0};"],
+    "description": "Dart `import hide` snippet"
+  },
+  "Dart anonymous function": {
+    "prefix": "dart_anon",
+    "body": ["(${1}) ${2}{${0}}"],
+    "description": "Dart anonymous function"
+  },
+  "Dart Class snippet": {
+    "prefix": "dart_class",
+    "body": ["class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} {", "${0}", "}"],
+    "description": "Dart Class snippet"
+  },
+  "Dart Class snippet with extends keyword": {
+    "prefix": "dart_classex",
+    "body": [
+      "class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends ${2} {",
+      "  ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}(${0}) : super();",
+      "}"
+    ],
+    "description": "Dart Class snippet with extends keyword"
+  },
+  "ListView widget snippet": {
+    "prefix": "flutter_listv",
+    "body": [
+      "ListView.builder(",
+      "  itemCount: ${1:itemCount},",
+      "  itemBuilder: (context, index) {",
+      "    return ${2:ListTile(title: Text('Item $index', style: TextStyle(fontSize: 16, color: Colors.black, fontWeight: FontWeight.normal)))};",
+      "  },",
+      ")${0}"
+    ],
+    "description": "ListView.builder widget snippet"
+  },
+  "GridView widget snippet": {
+    "prefix": "flutter_gridv",
+    "body": [
+      "GridView.builder(",
+      "  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(",
+      "    crossAxisCount: ${1:2},",
+      "  ),",
+      "  itemCount: ${2:itemCount},",
+      "  itemBuilder: (context, index) {",
+      "    return ${3:Container(color: Colors.blueAccent, child: Text('Item $index', style: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.normal)))};",
+      "  },",
+      ")${0}"
+    ],
+    "description": "GridView.builder widget snippet"
+  },
+  "FutureBuilder widget snippet": {
+    "prefix": "flutter_futbuild",
+    "body": [
+      "FutureBuilder<${1:DataType}>( ",
+      "  future: ${2:fetchData}(),",
+      "  builder: (context, snapshot) {",
+      "    if (snapshot.connectionState == ConnectionState.waiting) {",
+      "      return const CircularProgressIndicator();",
+      "    } else if (snapshot.hasError) {",
+      "      return Text('Error: ${snapshot.error}', style: TextStyle(fontSize: 16, color: Colors.red, fontWeight: FontWeight.normal));",
+      "    } else {",
+      "      return ${3:Widget};",
+      "    }",
+      "  },",
+      ")${0}"
+    ],
+    "description": "FutureBuilder widget snippet"
+  },
+  "StreamBuilder widget snippet": {
+    "prefix": "flutter_strbuild",
+    "body": [
+      "StreamBuilder<${1:DataType}>( ",
+      "  stream: ${2:stream},",
+      "  builder: (context, snapshot) {",
+      "    if (snapshot.connectionState == ConnectionState.waiting) {",
+      "      return const CircularProgressIndicator();",
+      "    } else if (snapshot.hasError) {",
+      "      return Text('Error: ${snapshot.error}', style: TextStyle(fontSize: 16, color: Colors.red, fontWeight: FontWeight.normal));",
+      "    } else if (!snapshot.hasData) {",
+      "      return const Text('No data available', style: TextStyle(fontSize: 16, color: Colors.black, fontWeight: FontWeight.normal));",
+      "    } else {",
+      "      return ${3:Widget};",
+      "    }",
+      "  },",
+      ")${0}"
+    ],
+    "description": "StreamBuilder widget snippet"
+  },
+  "ScaffoldBodyContainer custom widget snippet": {
+    "prefix": "flutter_scaffbody",
+    "body": [
+      "class ScaffoldBodyContainer extends StatelessWidget {",
+      "  final Widget? contentView;",
+      "  final Widget? bottomView;",
+      "  final bool inScrollView;",
+      "  final Color? backgroundColor;",
+      "  const ScaffoldBodyContainer({",
+      "    this.contentView,",
+      "    this.inScrollView = true,",
+      "    this.backgroundColor,",
+      "    this.bottomView,",
+      "    super.key",
+      "  });",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    var size = MediaQuery.sizeOf(context);",
+      "    return Container(",
+      "      width: size.width,",
+      "      clipBehavior: Clip.hardEdge,",
+      "      height: size.height,",
+      "      child: Column(",
+      "        children: [",
+      "          Expanded(",
+      "            child: inScrollView",
+      "              ? SingleChildScrollView(",
+      "                  padding: const EdgeInsets.only(right: 21, left: 21, top: 21),",
+      "                  child: contentView ?? const SizedBox(),",
+      "                )",
+      "              : contentView ?? const SizedBox(),",
+      "          ),",
+      "          bottomView ?? const SizedBox()",
+      "        ],",
+      "      ),",
+      "      decoration: BoxDecoration(",
+      "        borderRadius: const BorderRadius.vertical(top: Radius.circular(35)),",
+      "        color: backgroundColor ?? Colors.blueAccent",
+      "      ),",
+      "    );",
+      "  }",
+      "}"
+    ],
+    "description": "Custom ScaffoldBodyContainer widget snippet"
+  },
+  "ListView.separated widget snippet": {
+    "prefix": "flutter_listvsep",
+    "body": [
+      "ListView.separated(",
+      "  itemCount: ${1:itemCount},",
+      "  itemBuilder: (context, index) {",
+      "    return ${2:ListTile(title: Text('Item $index', style: TextStyle(fontSize: 16, color: Colors.black, fontWeight: FontWeight.normal)))};",
+      "  },",
+      "  separatorBuilder: (context, index) => const Divider(),",
+      ")${0}"
+    ],
+    "description": "ListView.separated widget snippet"
+  },
+  "GridView.count widget snippet": {
+    "prefix": "flutter_gridvcount",
+    "body": [
+      "GridView.count(",
+      "  crossAxisCount: ${1:2},",
+      "  children: List.generate(${2:itemCount}, (index) {",
+      "    return ${3:Container(color: Colors.blueAccent, child: Text('Item $index', style: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.normal)))};",
+      "  }),",
+      ")${0}"
+    ],
+    "description": "GridView.count widget snippet"
+  },
+  "GridView.extent widget snippet": {
+    "prefix": "flutter_gridvextent",
+    "body": [
+      "GridView.extent(",
+      "  maxCrossAxisExtent: ${1:100},",
+      "  children: List.generate(${2:itemCount}, (index) {",
+      "    return ${3:Container(color: Colors.blueAccent, child: Text('Item $index', style: TextStyle(fontSize: 16, color: Colors.white, fontWeight: FontWeight.normal)))};",
+      "  }),",
+      ")${0}"
+    ],
+    "description": "GridView.extent widget snippet"
+  },
+  "CustomScrollView widget snippet": {
+    "prefix": "flutter_customscroll",
+    "body": [
+      "CustomScrollView(",
+      "  slivers: <Widget>[",
+      "    SliverList(",
+      "      delegate: SliverChildBuilderDelegate(",
+      "        (BuildContext context, int index) {",
+      "          return ${1:ListTile(title: Text('Item $index', style: TextStyle(fontSize: 16, color: Colors.black, fontWeight: FontWeight.normal)))};",
+      "        },",
+      "        childCount: ${2:itemCount},",
+      "      ),",
+      "    ),",
+      "  ],",
+      ")${0}"
+    ],
+    "description": "CustomScrollView widget snippet"
+  },
+  "dispose method snippet": {
+    "prefix": "flutter_dispose",
+    "body": [
+      "@override",
+      "void dispose() {",
+      "  ${1:// Add your cleanup code here}",
+      "  super.dispose();",
+      "}"
+    ],
+    "description": "Dispose method snippet"
+  },
+  "CustomPainter widget snippet": {
+    "prefix": "flutter_custompainter",
+    "body": [
+      "class ${1:CustomPainterName} extends CustomPainter {",
+      "  @override",
+      "  void paint(Canvas canvas, Size size) {",
+      "    // Draw your custom shape here",
+      "    ${2:// Your drawing code}",
+      "  }",
+      "",
+      "  @override",
+      "  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;",
+      "}"
+    ],
+    "description": "CustomPainter widget snippet"
+  },
+  "CustomClipper widget snippet": {
+    "prefix": "flutter_customclipper",
+    "body": [
+      "class ${1:CustomClipperName} extends CustomClipper<Path> {",
+      "  @override",
+      "  Path getClip(Size size) {",
+      "    final path = Path();",
+      "    // Define your custom path here",
+      "    ${2:// Your clipping code}",
+      "    return path;",
+      "  }",
+      "",
+      "  @override",
+      "  bool shouldReclip(covariant CustomClipper<Path> oldClipper) => false;",
+      "}"
+    ],
+    "description": "CustomClipper widget snippet"
+  },
+  "reassemble method snippet": {
+    "prefix": "flutter_reassemble",
+    "body": [
+      "@override",
+      "void reassemble() {",
+      "  super.reassemble();",
+      "  ${1:// Code to run during hot reload}",
+      "}"
+    ],
+    "description": "Reassemble method snippet"
+  },
+  "didChangeDependencies method snippet": {
+    "prefix": "flutter_didchangedep",
+    "body": [
+      "@override",
+      "void didChangeDependencies() {",
+      "  super.didChangeDependencies();",
+      "  ${1:// Code to run when dependencies change}",
+      "}"
+    ],
+    "description": "didChangeDependencies method snippet"
+  },
+  "didUpdateWidget method snippet": {
+    "prefix": "flutter_didupdatewidget",
+    "body": [
+      "@override",
+      "void didUpdateWidget(covariant ${1:WidgetName} oldWidget) {",
+      "  super.didUpdateWidget(oldWidget);",
+      "  ${2:// Code to run when the widget updates}",
+      "}"
+    ],
+    "description": "didUpdateWidget method snippet"
+  },
+  "AnimatedBuilder widget snippet": {
+    "prefix": "flutter_animatedbuilder",
+    "body": [
+      "AnimatedBuilder(",
+      "  animation: ${1:animation},",
+      "  builder: (context, child) {",
+      "    return ${2:Container(} // Your widget here",
+      "      ${3:},",
+      "    );",
+      "  },",
+      ")${0}"
+    ],
+    "description": "AnimatedBuilder widget snippet"
+  },
+  "StatefulBuilder widget snippet": {
+    "prefix": "flutter_statefulbuilder",
+    "body": [
+      "StatefulBuilder(",
+      "  builder: (BuildContext context, StateSetter setState) {",
+      "    return ${1:Container(} // Your widget here",
+      "      ${2:},",
+      "    );",
+      "  },",
+      ")${0}"
+    ],
+    "description": "StatefulBuilder widget snippet"
+  },
+  "OrientationBuilder widget snippet": {
+    "prefix": "flutter_orientbuilder",
+    "body": [
+      "OrientationBuilder(",
+      "  builder: (context, orientation) {",
+      "    return ${1:Container(} // Your widget here",
+      "      ${2:},",
+      "    );",
+      "  },",
+      ")${0}"
+    ],
+    "description": "OrientationBuilder widget snippet"
+  },
+  "LayoutBuilder widget snippet": {
+    "prefix": "flutter_layoutbuilder",
+    "body": [
+      "LayoutBuilder(",
+      "  builder: (BuildContext context, BoxConstraints constraints) {",
+      "    return ${1:Container(} // Your widget here",
+      "      ${2:},",
+      "    );",
+      "  },",
+      ")${0}"
+    ],
+    "description": "LayoutBuilder widget snippet"
+  },
+  "SingleChildScrollView widget snippet": {
+    "prefix": "flutter_singlechildscroll",
+    "body": [
+      "SingleChildScrollView(",
+      "  child: ${1:Column(} // Your widget here",
+      "    ${2:},",
+      "  ),",
+      ")${0}"
+    ],
+    "description": "SingleChildScrollView widget snippet"
+  },
+  "InheritedWidget snippet": {
+    "prefix": "flutter_inheritedwidget",
+    "body": [
+      "class ${1:InheritedWidgetName} extends InheritedWidget {",
+      "  final ${2:dataType} ${3:data};",
+      "",
+      "  const ${1:InheritedWidgetName}({",
+      "    Key? key,",
+      "    required this.data,",
+      "    required Widget child,",
+      "  }) : super(key: key, child: child);",
+      "",
+      "  static ${2:dataType} of(BuildContext context) {",
+      "    return context.dependOnInheritedWidgetOfExactType<${1:InheritedWidgetName}>()!.data;",
+      "  }",
+      "",
+      "  @override",
+      "  bool updateShouldNotify(covariant InheritedWidget oldWidget) => true;",
+      "}"
+    ],
+    "description": "InheritedWidget snippet"
+  },
+  "debugPrint snippet": {
+    "prefix": "flutter_debugprint",
+    "body": ["debugPrint('${1:Your message here}');", "${0}"],
+    "description": "Flutter debugPrint snippet"
+  },
+  "Import Material Package snippet": {
+    "prefix": "dart_import_material",
+    "body": ["import 'package:flutter/material.dart';", "${0}"],
+    "description": "Import Material Package snippet"
+  },
+  "Import Cupertino Package snippet": {
+    "prefix": "dart_import_cupertino",
+    "body": ["import 'package:flutter/cupertino.dart';", "${0}"],
+    "description": "Import Cupertino Package snippet"
+  },
+  "Import flutter_test Package snippet": {
+    "prefix": "dart_import_test",
+    "body": ["import 'package:flutter_test/flutter_test.dart';", "${0}"],
+    "description": "Import flutter_test Package snippet"
+  },
+  "Import app_localizations Package snippet": {
+    "prefix": "dart_import_localizations",
+    "body": [
+      "import 'package:flutter_gen/gen_l10n/app_localizations.dart';",
+      "${0}"
+    ],
+    "description": "Import app_localizations Package snippet"
+  },
+  "MaterialApp snippet": {
+    "prefix": "flutter_matapp",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "",
+      "void main() {",
+      "  runApp(const MyApp());",
+      "}",
+      "",
+      "class MyApp extends StatelessWidget {",
+      "  const MyApp({Key? key}) : super(key: key);",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return MaterialApp(",
+      "      title: '${1:App Title}',",
+      "      theme: ThemeData(",
+      "        primarySwatch: Colors.blue,",
+      "      ),",
+      "      home: const HomePage(),",
+      "    );",
+      "  }",
+      "}",
+      "",
+      "class HomePage extends StatelessWidget {",
+      "  const HomePage({Key? key}) : super(key: key);",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return Scaffold(",
+      "      appBar: AppBar(",
+      "        title: const Text('${2:Home Page}'),",
+      "      ),",
+      "      body: const Center(",
+      "        child: Text('Hello, Material App!'),",
+      "      ),",
+      "    );",
+      "  }",
+      "}"
+    ],
+    "description": "MaterialApp snippet"
+  },
+  "CupertinoApp snippet": {
+    "prefix": "flutter_cuperapp",
+    "body": [
+      "import 'package:flutter/cupertino.dart';",
+      "import 'package:flutter/material.dart';",
+      "",
+      "void main() {",
+      "  runApp(const MyApp());",
+      "}",
+      "",
+      "class MyApp extends StatelessWidget {",
+      "  const MyApp({Key? key}) : super(key: key);",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return CupertinoApp(",
+      "      title: '${1:App Title}',",
+      "      home: const HomePage(),",
+      "    );",
+      "  }",
+      "}",
+      "",
+      "class HomePage extends StatelessWidget {",
+      "  const HomePage({Key? key}) : super(key: key);",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return CupertinoPageScaffold(",
+      "      navigationBar: CupertinoNavigationBar(",
+      "        middle: const Text('${2:Home Page}'),",
+      "      ),",
+      "      child: const Center(",
+      "        child: Text('Hello, Cupertino App!'),",
+      "      ),",
+      "    );",
+      "  }",
+      "}"
+    ],
+    "description": "CupertinoApp snippet"
+  },
+  "TweenAnimationBuilder snippet": {
+    "prefix": "flutter_tween_anim_builder",
+    "body": [
+      "TweenAnimationBuilder<double>(",
+      "  tween: Tween<double>(begin: 0, end: 100),",
+      "  duration: const Duration(seconds: 2),",
+      "  builder: (context, value, child) {",
+      "    return Text('Value: ${value.toStringAsFixed(1)}',",
+      "      style: const TextStyle(fontSize: 24),",
+      "    );",
+      "  },",
+      ")"
+    ],
+    "description": "TweenAnimationBuilder snippet"
+  },
+  "ValueListenableBuilder snippet": {
+    "prefix": "flutter_value_listen_builder",
+    "body": [
+      "ValueListenableBuilder<int>(",
+      "  valueListenable: counter,",
+      "  builder: (context, value, child) {",
+      "    return Column(",
+      "      mainAxisAlignment: MainAxisAlignment.center,",
+      "      children: [",
+      "        Text('Count: $value',",
+      "          style: const TextStyle(fontSize: 24),",
+      "        ),",
+      "        ElevatedButton(",
+      "          onPressed: () => counter.value++,",
+      "          child: const Text('Increment'),",
+      "        ),",
+      "      ],",
+      "    );",
+      "  },",
+      ")"
+    ],
+    "description": "ValueListenableBuilder snippet"
+  },
+  "RefreshListIndicator snippet": {
+    "prefix": "flutter_refresh_list",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "",
+      "class RefreshListIndicator extends StatelessWidget {",
+      "  final dynamic onRefresh;",
+      "  final Widget? child;",
+      "  final Color? backgroundColor;",
+      "  const RefreshListIndicator({",
+      "    super.key,",
+      "    this.child,",
+      "    this.onRefresh,",
+      "    this.backgroundColor = Colors.white,",
+      "  });",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return RefreshIndicator(",
+      "      backgroundColor: backgroundColor,",
+      "      color: Colors.white,",
+      "      onRefresh: onRefresh,",
+      "      child: child ?? const SizedBox(),",
+      "    );",
+      "  }",
+      "}"
+    ],
+    "description": "Custom RefreshListIndicator snippet"
+  },
+  "AppTextField snippet": {
+    "prefix": "flutter_app_text_field",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "import 'package:flutter/services.dart';",
+      "",
+      "class AppTextField extends StatefulWidget {",
+      "  final TextEditingController? controller;",
+      "  final String? hint;",
+      "  final String? floatingHint;",
+      "  final Widget? trailingIcon;",
+      "  final bool isAutoFocus;",
+      "  final TextInputType? inputType;",
+      "  final TextInputAction? inputAction;",
+      "  final VoidCallback? onTap;",
+      "  final FocusNode? focusNode;",
+      "  final bool showCounter;",
+      "  final bool isReadOnly;",
+      "  final dynamic onChange;",
+      "  final dynamic onFieldSubmitted;",
+      "  final Color? textColor;",
+      "  final dynamic autofillHints;",
+      "  final double? fontSize;",
+      "  final bool hasBorder;",
+      "  final String? Function(String?)? validator;",
+      "  final bool isEnable;",
+      "  final bool isPassword;",
+      "  final double? radius;",
+      "  final String? leadingText;",
+      "  final int? maxLines;",
+      "  final List<TextInputFormatter>? inputFormatters;",
+      "  final Color? fillColor;",
+      "  final Color? placeHolderColor;",
+      "  final TextAlign? textAlign;",
+      "  final Widget? leadingIcon;",
+      "  final Color? focusedColor;",
+      "  final Color? borderColor;",
+      "  final int? maxLength;",
+      "  const AppTextField({",
+      "    super.key,",
+      "    this.controller,",
+      "    this.radius,",
+      "    this.maxLines = 1,",
+      "    this.leadingText,",
+      "    this.fontSize,",
+      "    this.borderColor,",
+      "    this.placeHolderColor,",
+      "    this.maxLength,",
+      "    this.fillColor,",
+      "    this.onFieldSubmitted,",
+      "    this.textColor,",
+      "    this.leadingIcon,",
+      "    this.showCounter = true,",
+      "    this.autofillHints,",
+      "    this.hasBorder = true,",
+      "    this.trailingIcon,",
+      "    this.focusNode,",
+      "    this.validator,",
+      "    this.focusedColor,",
+      "    this.isPassword = false,",
+      "    this.textAlign,",
+      "    this.isEnable = true,",
+      "    this.onChange,",
+      "    this.onTap,",
+      "    this.inputFormatters,",
+      "    this.isReadOnly = false,",
+      "    this.hint,",
+      "    this.isAutoFocus = false,",
+      "    this.inputAction = TextInputAction.next,",
+      "    this.inputType,",
+      "    this.floatingHint,",
+      "  });",
+      "",
+      "  @override",
+      "  State<AppTextField> createState() => _AppTextFieldState();",
+      "}",
+      "",
+      "class _AppTextFieldState extends State<AppTextField> {",
+      "  FocusNode? focusNode = FocusNode();",
+      "",
+      "  bool hasFocus = false;",
+      "",
+      "  @override",
+      "  void initState() {",
+      "    super.initState();",
+      "    if (widget.focusNode != null) focusNode = widget.focusNode;",
+      "    focusNode?.addListener(() {",
+      "      hasFocus = focusNode?.hasFocus == true;",
+      "      setState(() {});",
+      "    });",
+      "    if (widget.isAutoFocus) _setAutoFocus();",
+      "  }",
+      "",
+      "  void _setAutoFocus() async {",
+      "    await Future.delayed(const Duration(milliseconds: 250));",
+      "    focusNode?.requestFocus();",
+      "  }",
+      "",
+      "  EdgeInsetsGeometry get contentPadding {",
+      "    if (widget.floatingHint == null) {",
+      "      return const EdgeInsets.only(left: 20.0, bottom: 7, top: 7);",
+      "    }",
+      "    return const EdgeInsets.only(left: 20.0);",
+      "  }",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return Container(",
+      "      padding: contentPadding,",
+      "      decoration: BoxDecoration(",
+      "        color: widget.isEnable ? widget.fillColor : Colors.grey,",
+      "        border: widget.hasBorder",
+      "            ? Border.all(",
+      "                width: hasFocus ? 2.0 : 1.0,",
+      "                color: hasFocus",
+      "                    ? const Color(0xFF010141)",
+      "                    : widget.borderColor ?? const Color(0xFFEFEFEF),",
+      "              )",
+      "            : null,",
+      "        borderRadius: BorderRadius.circular(10),",
+      "      ),",
+      "      child: TextFormField(",
+      "        autofillHints: widget.autofillHints,",
+      "        onTap: widget.onTap,",
+      "        maxLines: widget.maxLines,",
+      "        maxLength: widget.maxLength,",
+      "        validator: widget.validator,",
+      "        obscuringCharacter: '●',",
+      "        autovalidateMode: AutovalidateMode.onUserInteraction,",
+      "        onChanged: widget.onChange,",
+      "        readOnly: widget.isReadOnly,",
+      "        obscureText: widget.isPassword,",
+      "        enabled: widget.isEnable,",
+      "        autocorrect: false,",
+      "        enableSuggestions: false,",
+      "        onFieldSubmitted: widget.onFieldSubmitted,",
+      "        scrollPadding: const EdgeInsets.only(bottom: 150),",
+      "        controller: widget.controller,",
+      "        focusNode: focusNode,",
+      "        cursorColor: widget.textColor ?? Theme.of(context).textTheme.bodySmall?.color,",
+      "        inputFormatters: widget.inputFormatters,",
+      "        textInputAction: widget.inputAction,",
+      "        keyboardType: widget.inputType,",
+      "        textAlign: widget.textAlign ?? TextAlign.start,",
+      "        style: TextStyle(",
+      "          fontSize: widget.fontSize ?? 17.0,",
+      "          color: widget.textColor ?? Colors.black,",
+      "        ),",
+      "        decoration: InputDecoration(",
+      "          counterStyle: !widget.showCounter ? const TextStyle(fontSize: 0) : null,",
+      "          suffixIcon: widget.trailingIcon,",
+      "          prefixIcon: widget.leadingIcon,",
+      "          prefixText: widget.leadingText,",
+      "          border: InputBorder.none,",
+      "          hintText: widget.hint,",
+      "          labelText: widget.floatingHint,",
+      "          floatingLabelStyle: TextStyle(",
+      "            color: widget.textColor ?? Colors.black, fontSize: 14,",
+      "          ),",
+      "          labelStyle: TextStyle(",
+      "            fontSize: 14,",
+      "            color: widget.textColor ?? Theme.of(context).textTheme.bodySmall?.color,",
+      "          ),",
+      "          hintStyle: TextStyle(",
+      "            fontSize: 14,",
+      "            color: widget.placeHolderColor ?? widget.textColor ?? Colors.black.withOpacity(0.5),",
+      "          ),",
+      "        ),",
+      "      ),",
+      "    );",
+      "  }",
+      "}"
+    ],
+    "description": "Custom AppTextField snippet"
+  },
+  "AppPasswordField snippet": {
+    "prefix": "flutter_app_password_field",
+    "body": [
+      "import 'package:flutter/material.dart';",
+      "import 'package:flutter/services.dart';",
+      "import 'app_text_field.dart';",
+      "",
+      "class AppPasswordField extends StatefulWidget {",
+      "  final String? floatingHint;",
+      "  final String? placeholder;",
+      "  final dynamic onChange;",
+      "  final double? fontSize;",
+      "  final TextInputAction? action;",
+      "  final bool autoFocus;",
+      "  final TextInputType? type;",
+      "  final Color? fillColor;",
+      "  final Color? textColor;",
+      "  final FocusNode? focusNode;",
+      "  final List<TextInputFormatter>? inputFormatters;",
+      "  final TextEditingController? controller;",
+      "  final Color? iconColor;",
+      "  const AppPasswordField({",
+      "    this.floatingHint,",
+      "    this.placeholder,",
+      "    this.controller,",
+      "    this.action,",
+      "    this.autoFocus = false,",
+      "    this.fillColor,",
+      "    this.fontSize,",
+      "    this.iconColor,",
+      "    this.type,",
+      "    this.textColor,",
+      "    this.focusNode,",
+      "    this.inputFormatters,",
+      "    this.onChange,",
+      "    super.key",
+      "  });",
+      "",
+      "  @override",
+      "  State<AppPasswordField> createState() => _AppPasswordFieldState();",
+      "}",
+      "",
+      "class _AppPasswordFieldState extends State<AppPasswordField> {",
+      "  bool passwordVisible = false;",
+      "",
+      "  @override",
+      "  Widget build(BuildContext context) {",
+      "    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [",
+      "      AppTextField(",
+      "        floatingHint: widget.floatingHint,",
+      "        onChange: widget.onChange,",
+      "        inputFormatters: widget.inputFormatters,",
+      "        inputAction: widget.action,",
+      "        inputType: widget.type,",
+      "        fontSize: widget.fontSize,",
+      "        focusNode: widget.focusNode,",
+      "        controller: widget.controller,",
+      "        fillColor: widget.fillColor,",
+      "        isAutoFocus: widget.autoFocus,",
+      "        isPassword: !passwordVisible,",
+      "        textColor: widget.textColor,",
+      "        trailingIcon: Padding(",
+      "          padding: const EdgeInsets.only(right: 7),",
+      "          child: IconButton(",
+      "            onPressed: () {",
+      "              passwordVisible = !passwordVisible;",
+      "              setState(() {});",
+      "            },",
+      "            icon: Icon(",
+      "              !passwordVisible ? Icons.visibility_off : Icons.visibility,",
+      "              color: widget.iconColor ?? const Color(0xFF010141),",
+      "            ),",
+      "          ),",
+      "        ),",
+      "        hint: widget.placeholder,",
+      "      ),",
+      "    ]);",
+      "  }",
+      "}"
+    ],
+    "description": "Creates a custom password field widget using AppTextField."
+  },
+  "GestureDetector snippet": {
+    "prefix": "flutter_gesture_detector",
+    "body": [
+      "GestureDetector(",
+      "  onTap: ${1:onTap},",
+      "  child: ${2:Container(}",
+      "    ${3:},",
+      "  ),",
+      ")${0}"
+    ],
+    "description": "Standard GestureDetector snippet"
+  },
+  "InkWell snippet": {
+    "prefix": "flutter_inkwell",
+    "body": [
+      "InkWell(",
+      "  onTap: ${1:onTap},",
+      "  child: ${2:Container(}",
+      "    ${3:},",
+      "  ),",
+      ")${0}"
+    ],
+    "description": "Standard InkWell snippet"
+  }
+}
