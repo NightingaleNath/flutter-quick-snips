@@ -2,6 +2,8 @@
   "Stateless widget snippet": {
     "prefix": "flutter_stless",
     "body": [
+      "import 'package:flutter/material.dart';",
+      "",
       "class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends StatelessWidget {",
       "  const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}({super.key});",
       "",
@@ -11,11 +13,13 @@
       "  }",
       "}"
     ],
-    "description": "StatelessWidget snippet"
+    "description": "StatelessWidget with material import"
   },
   "Stateful widget snippet": {
     "prefix": "flutter_stful",
     "body": [
+      "import 'package:flutter/material.dart';",
+      "",
       "class ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/} extends StatefulWidget {",
       "  const ${TM_FILENAME_BASE/(.*)/${1:/pascalcase}/}({super.key});",
       "",
@@ -32,7 +36,7 @@
       "  }",
       "}"
     ],
-    "description": "StatefulWidget snippet"
+    "description": "StatefulWidget with material import"
   },
   "Scaffold widget snippet": {
     "prefix": "flutter_scaffold",
