@@ -2,7 +2,7 @@
   "name": "flutter-quick-snips",
   "displayName": "Flutter Quick Snips",
   "description": "A collection of useful Flutter widget snippets for quick access.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "engines": {
     "vscode": "^1.94.0"
   },
@@ -31,7 +31,77 @@
         "language": "dart",
         "path": "./snippets/quick_snips.code-snippets"
       }
-    ]
+    ],
+    "commands": [
+      {
+        "command": "flutter-quick-snips.showSnippets",
+        "title": "Show Flutter Quick Snips"
+      },
+      {
+        "command": "flutter-quick-snips.useCodeLyticalStructure",
+        "title": "Use CodeLytical Structure"
+      },
+      {
+        "command": "flutter-quick-snips.wrapWithConsumer",
+        "title": "Wrap with Consumer"
+      },
+      {
+        "command": "flutter-quick-snips.wrapWithValueListenableBuilder",
+        "title": "Wrap with ValueListenableBuilder"
+      },
+      {
+        "command": "flutter-quick-snips.wrapWithBuilder",
+        "title": "Wrap with Builder"
+      },
+      {
+        "command": "flutter-quick-snips.wrapWithLayoutBuilder",
+        "title": "Wrap with LayoutBuilder"
+      },
+      {
+        "command": "flutter-quick-snips.wrapWithStreamBuilder",
+        "title": "Wrap with StreamBuilder"
+      },
+      {
+        "command": "flutter-quick-snips.wrapWithFutureBuilder",
+        "title": "Wrap with FutureBuilder"
+      },
+      {
+        "command": "flutter-quick-snips.wrapWithAnimatedBuilder",
+        "title": "Wrap with AnimatedBuilder"
+      },
+      {
+        "command": "flutter-quick-snips.wrapWithRepaintBoundary",
+        "title": "Wrap with RepaintBoundary"
+      },
+      {
+        "command": "flutter-quick-snips.wrapWithDefaultTextStyle",
+        "title": "Wrap with DefaultTextStyle"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "flutter-quick-snips.wrapWithConsumer",
+          "when": "editorLangId == dart",
+          "group": "navigation"
+        },
+        {
+          "command": "flutter-quick-snips.wrapWithValueListenableBuilder",
+          "when": "editorLangId == dart",
+          "group": "navigation"
+        },
+        {
+          "command": "flutter-quick-snips.wrapWithBuilder",
+          "when": "editorLangId == dart",
+          "group": "navigation"
+        },
+        {
+          "command": "flutter-quick-snips.wrapWithLayoutBuilder",
+          "when": "editorLangId == dart",
+          "group": "navigation"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
